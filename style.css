@@ -368,6 +368,40 @@ div.tab button:hover {
 }
 
 
+/* Style for the slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+  
+  /* Style for the slides */
+.mySlides {
+    display: none;
+}
+  
+  /* Style for the images within the slides */
+.mySlides img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
 /* Style the tab content */
 
 .tabcontent {
