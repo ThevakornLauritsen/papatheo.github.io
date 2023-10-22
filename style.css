@@ -369,22 +369,40 @@ div.tab button:hover {
 
 
 /* Style for the slideshow container */
+
+.slider-container{
+    display: block;
+}
+
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 500px;
+    max-height: 500px;
     position: relative;
     margin: auto;
     overflow: hidden;
 }
-  
-  /* Style for the slides */
+
+/* CSS for the fading effect */
 .mySlides {
     display: none;
-}
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-in-out; /* Adjust the duration as needed */
+  }
+  
+  .mySlides.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  
   
   /* Style for the images within the slides */
 .mySlides img {
     width: 100%;
+    height: 100%;
     vertical-align: middle;
+    object-fit: contain;
 }
 
 /* The dots/bullets/indicators */
@@ -401,6 +419,26 @@ div.tab button:hover {
 .active {
     background-color: #717171;
 }
+
+/* CSS for the fading effect */
+.fade {
+    animation: fade 1s ease-in-out; /* Adjust the duration as needed */
+    opacity: 0; /* Start with opacity 0 */
+    visibility: hidden; /* Start hidden */
+}
+  
+  @keyframes fade {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+}
+  
+  
 
 /* Style the tab content */
 
@@ -1677,7 +1715,6 @@ hr.invis3 {
 .loader {
     display: block;
     margin: 20px auto 0;
-    vertical-align: middle;
 }
 
 #preloader {
