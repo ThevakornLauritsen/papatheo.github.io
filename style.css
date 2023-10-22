@@ -422,7 +422,7 @@ div.tab button:hover {
 
 /* CSS for the fading effect */
 .fade {
-    animation: fade 1s ease-in-out; /* Adjust the duration as needed */
+    animation: fade 0.1s ease-in-out; /* Adjust the duration as needed */
     opacity: 0; /* Start with opacity 0 */
     visibility: hidden; /* Start hidden */
 }
