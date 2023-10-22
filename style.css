@@ -71,7 +71,7 @@ h1 {
 
 h2 {
     font-size: 27px;
-    line-height: 38px;
+    line-height: 45px;
     margin-bottom: 20px
 }
 
@@ -371,7 +371,7 @@ div.tab button:hover {
 /* Style for the slideshow container */
 
 .slider-container{
-    display: block;
+    display: flex;
 }
 
 .slideshow-container {
@@ -380,6 +380,20 @@ div.tab button:hover {
     position: relative;
     margin: auto;
     overflow: hidden;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width:500px){
+    .slideshow-container {
+        max-width: 500px;
+        max-height: 500px;
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+        flex-flow: column;
+        justify-content: space-around;
+    }
 }
 
 /* CSS for the fading effect */
@@ -405,6 +419,28 @@ div.tab button:hover {
     object-fit: contain;
 }
 
+.text-box {
+    position: absolute;
+    top: 94%; /* Adjust the positioning as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 1); /*Background color and opacity */
+    padding-top: 15px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+    height: 4rem;
+    width: 20rem;
+    text-align: center;
+}
+
+.text-box p{
+    color: rgba(255, 255, 255, 1);
+    font-size:22px;
+    font-weight:500;
+}
+
 /* The dots/bullets/indicators */
 .dot {
     height: 15px;
@@ -412,7 +448,7 @@ div.tab button:hover {
     margin: 0 2px;
     background-color: #bbb;
     border-radius: 50%;
-    display: inline-block;
+    display: inline-block!important;
     transition: background-color 0.6s ease;
 }
 
@@ -422,7 +458,7 @@ div.tab button:hover {
 
 /* CSS for the fading effect */
 .fade {
-    animation: fade 0.1s ease-in-out; /* Adjust the duration as needed */
+    animation: fade 1s ease-in-out; /* Adjust the duration as needed */
     opacity: 0; /* Start with opacity 0 */
     visibility: hidden; /* Start hidden */
 }
@@ -475,7 +511,7 @@ div.tab button:hover {
 **************************************/
 
 .section {
-    padding: 4rem 0;
+    padding: 9rem 0;
     display: block;
     position: relative;
     background-color: #ffffff;
@@ -1505,7 +1541,7 @@ hr.invis3 {
 }
 
 .footer-text img {
-    max-width: 290px;
+    max-width: 500px;
 }
 
 .footer-text p {
